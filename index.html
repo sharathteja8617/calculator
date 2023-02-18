@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-image: url(../Asset/Images/ninja\ black.jpg);
+        background-size: 100%;
+        background-position: 0px --450px;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #container {
+        position: relative;
+        width: 40%;
+        height: 80%;
+        background-color: rgb(56, 53, 53);
+        border-radius: 5%;
+        box-shadow: 0px 0px 5px black;
+      }
+      #display {
+        width: 75%;
+        height: 30px;
+        position: absolute;
+        top: 5%;
+        left: 9%;
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        padding: 5px;
+        outline: none;
+        border: groove 10px grey;
+        box-shadow: 2px 2px 5px black;
+      }
+      .a {
+        top: 15vh;
+        left: 5vw;
+        margin: 5px;
+        margin-top: 20px;
+        position: relative;
+        width: 15%;
+        height: 6vh;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+        border: 2px solid white;
+      }
+      #clear {
+        position: absolute;
+        bottom: 30px;
+        width: 30%;
+        height: 6vh;
+        font-size: 24px;
+        left: 5vw;
+        background-color: black;
+        color: wheat;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+      }
+      #equ {
+        position: absolute;
+        top: 571px;
+        width: 40%;
+        height: 6vh;
+        font-size: 24px;
+        left: 20vw;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form name="cform">
+        <input class="a" name="Ans" id="display" /><br />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="1"
+          onclick="form.Ans.value+='1'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="2"
+          onclick="form.Ans.value+='2'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="3"
+          onclick="form.Ans.value+='3'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="+"
+          onclick="form.Ans.value+='+'"
+        /><br />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="4"
+          onclick="form.Ans.value+='4'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="5"
+          onclick="form.Ans.value+='5'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="6"
+          onclick="form.Ans.value+='6'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="-"
+          onclick="form.Ans.value+='-'"
+        /><br />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="7"
+          onclick="form.Ans.value+='7'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="8"
+          onclick="form.Ans.value+='8'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="9"
+          onclick="form.Ans.value+='9'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="*"
+          onclick="form.Ans.value+='*'"
+        /><br />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="%"
+          onclick="form.Ans.value+='%'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="0"
+          onclick="form.Ans.value+='0'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="."
+          onclick="form.Ans.value+='.'"
+        />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          value="/"
+          onclick="form.Ans.value+='/'"
+        /><br />
+        <input
+          class="a"
+          type="button"
+          onmousedown="clksound()"
+          id="equ"
+          value="="
+          onclick="form.Ans.value =eval(cform.Ans.value)"
+        />
+        <input
+          type="button"
+          onmousedown="clksound()"
+          id="clear"
+          value="C"
+          onclick="form.Ans.value =' '"
+        />
+      </form>
+    </div>
+    <script>
+      function clksound() {
+        var sound = new Audio();
+
+        sound.src = "./ping- sound.mp3";
+        sound.play();
+      }
+    </script>
+  </body>
+</html>
